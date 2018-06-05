@@ -10,153 +10,6 @@
 
     <title>Electron-igv.js Example</title>
 
-    <link rel="stylesheet" type="text/css"
-          href="lib/jquery-ui.css"/>
-    <link rel="stylesheet" type="text/css"
-          href="lib/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="lib/igv-beta.css">
-    <!-- <link rel="stylesheet" type="text/css" href="file:///Users/jrobinso/Dropbox/projects/igv.js/css/igv.css"> -->
-
-    <script src="lib/jquery.min.js"
-            onload="window.$ = window.jQuery = module.exports;"></script>
-    <!--  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
-    <script type="text/javascript"
-            src="lib/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="lib/igv-beta.js"></script>
-    -
-
-
-    <!-- JS -->
-    <!--    <script type="text/javascript" src="file:///Users/jrobinso/Dropbox/projects/igv.js/lib/inflate.js"></script>
-        <script type="text/javascript"
-                src="file:///Users/jrobinso/Dropbox/projects/igv.js/lib/zlib_and_gzip.min.js"></script>
-        <script type="text/javascript"
-                src="file:///Users/jrobinso/Dropbox/projects/igv.js/lib/jquery.mousewheel.js"></script>
-        <script type="text/javascript"
-                src="file:///Users/jrobinso/Dropbox/projects/igv.js/lib/promise-7.0.4.js"></script>
-        <script type="text/javascript"
-                src="file:///Users/jrobinso/Dropbox/projects/igv.js/lib/jquery.kinetic.min.js"></script>
-
-        &lt;!&ndash; IGV JS &ndash;&gt;
-        <script type="text/javascript" src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/igv-create.js"></script>
-        <script type="text/javascript" src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/ui/userFeedback.js"></script>
-        <script type="text/javascript" src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/ui/alertDialog.js"></script>
-        <script type="text/javascript" src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/ui/popover.js"></script>
-        <script type="text/javascript" src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/browser.js"></script>
-        <script type="text/javascript" src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/ideogram.js"></script>
-        <script type="text/javascript" src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/windowSizePanel.js"></script>
-        <script type="text/javascript" src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/referenceFrame.js"></script>
-        <script type="text/javascript" src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/igv-canvas.js"></script>
-        <script type="text/javascript" src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/genome.js"></script>
-        <script type="text/javascript" src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/trackView.js"></script>
-
-        <script type="text/javascript" src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/rulerTrack.js"></script>
-
-        <script type="text/javascript"
-                src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/feature/featureTrack.js"></script>
-        <script type="text/javascript"
-                src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/variant/variantTrack.js"></script>
-        <script type="text/javascript" src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/igv-color.js"></script>
-        <script type="text/javascript" src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/igv-utils.js"></script>
-        <script type="text/javascript" src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/parseUtils.js"></script>
-        <script type="text/javascript" src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/fasta.js"></script>
-        <script type="text/javascript" src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/sequenceTrack.js"></script>
-        <script type="text/javascript" src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/feature/wigTrack.js"></script>
-
-        <script type="text/javascript" src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/igv-exts.js"></script>
-        <script type="text/javascript" src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/igvxhr.js"></script>
-        <script type="text/javascript" src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/binary.js"></script>
-
-        <script type="text/javascript" src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/gtex/eqtlTrack.js"></script>
-        <script type="text/javascript"
-                src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/gtex/gtexFileReader.js"></script>
-        <script type="text/javascript" src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/gtex/gtexReader.js"></script>
-        <script type="text/javascript" src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/gtex/gtex.js"></script>
-        <script type="text/javascript"
-                src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/gtex/immvarReader.js"></script>
-
-        <script type="text/javascript" src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/bam/coverageMap.js"></script>
-        <script type="text/javascript" src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/bam/bamReader.js"></script>
-        <script type="text/javascript" src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/bam/bgzf.js"></script>
-        <script type="text/javascript" src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/bam/bamSource.js"></script>
-        <script type="text/javascript" src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/bam/bamTrack.js"></script>
-        <script type="text/javascript" src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/bam/bamAlignment.js"></script>
-        <script type="text/javascript"
-                src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/bam/bamAlignmentRow.js"></script>
-        <script type="text/javascript" src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/bam/bamIndex.js"></script>
-        <script type="text/javascript"
-                src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/bam/alignmentContainer.js"></script>
-        <script type="text/javascript"
-                src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/bam/pairedAlignment.js"></script>
-
-        <script type="text/javascript"
-                src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/ga4gh/ga4ghAlignmentReader.js"></script>
-        <script type="text/javascript"
-                src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/ga4gh/ga4ghVariantReader.js"></script>
-        <script type="text/javascript"
-                src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/ga4gh/ga4ghHelper.js"></script>
-        <script type="text/javascript"
-                src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/ga4gh/googleUtils.js"></script>
-
-        <script type="text/javascript" src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/intervalTree.js"></script>
-
-        <script type="text/javascript"
-                src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/feature/featureCache.js"></script>
-        <script type="text/javascript"
-                src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/feature/gffHelper.js"></script>
-        <script type="text/javascript"
-                src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/feature/featureSource.js"></script>
-        <script type="text/javascript"
-                src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/feature/featureParsers.js"></script>
-        <script type="text/javascript" src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/feature/tribble.js"></script>
-        <script type="text/javascript"
-                src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/feature/featureFileReader.js"></script>
-
-        <script type="text/javascript"
-                src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/feature/aneuSource.js"></script>
-        <script type="text/javascript"
-                src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/feature/aneuTrack.js"></script>
-        <script type="text/javascript" src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/encode/encode.js"></script>
-
-
-        <script type="text/javascript" src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/karyo/karyo.js"></script>
-        <script type="text/javascript"
-                src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/gwas/t2dVariantSource.js"></script>
-        <script type="text/javascript" src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/gwas/gwasTrack.js"></script>
-
-        <script type="text/javascript"
-                src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/feature/segParser.js"></script>
-        <script type="text/javascript" src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/feature/segTrack.js"></script>
-        <script type="text/javascript"
-                src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/variant/vcfParser.js"></script>
-        <script type="text/javascript" src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/variant/variant.js"></script>
-
-        <script type="text/javascript"
-                src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/bigwig/bufferedReader.js"></script>
-        <script type="text/javascript" src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/bigwig/bwBPTree.js"></script>
-        <script type="text/javascript" src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/bigwig/bwReader.js"></script>
-        <script type="text/javascript" src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/bigwig/bwRPTree.js"></script>
-        <script type="text/javascript" src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/bigwig/bwSource.js"></script>
-        <script type="text/javascript"
-                src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/bigwig/bwTotalSummary.js"></script>
-
-        <script type="text/javascript" src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/trackCore.js"></script>
-
-        <script type="text/javascript"
-                src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/ui/trackMenuPopupDialog.js"></script>
-
-        <script type="text/javascript" src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/ui/colorpicker.js"></script>
-        <script type="text/javascript"
-                src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/ui/dataRangeDialog.js"></script>
-        <script type="text/javascript" src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/ui/dialog.js"></script>
-        <script type="text/javascript" src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/ui/alertDialog.js"></script>
-        <script type="text/javascript" src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/ui/centerGuide.js"></script>
-
-        <script type="text/javascript" src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/set.js"></script>
-
-        <script src="file:///Users/jrobinso/Dropbox/projects/igv.js/js/oauth/google.js"></script>-->
-
-
 </head>
 
 <body>
@@ -170,56 +23,37 @@
 
 <script type="text/javascript">
 
-    $(document).ready(function () {
+    document.addEventListener("DOMContentLoaded", function () {
 
-        var div = $("#igvDiv")[0],
-            options = {
-                genome: "hg19",
-                locus: "myc",
-/*                reference: {
-                    id: "hg18",
-                    fastaURL: "http://localhost/igv-web/snps/chr1.fasta",
-                    cytobandURL: "http://localhost/igv-web/snps/chr1_cytoband.txt"
-                },*/
-                tracks: [
-                    /*                    {
-                     url: 'http://localhost/igv-web/snps/NA12878.SLX.sample.bam',
-                     name: 'BAM'
-                     }, {
-                     name: "SNPS",
-                     type: "annotation",
-                     format: "bed",
-                     sourceType: "file",
-                     url: "http://localhost/igv-web/snps/snp_calls.bed",
-                     indexed: false,
-                     searchable: true
-                     },
-                     {
-                     name: "Genes",
-                     type: "annotation",
-                     format: "refflat",
-                     sourceType: "file",
-                     url: "http://localhost/igv-web/snps/chr1_refGene.txt",
-                     indexed: false,
-                     order: Number.MAX_VALUE,
-                     displayMode: "EXPANDED"
-                     }*/
-                    {
-                        name: "Genes",
-                        type: "annotation",
-                        format: "bed",
-                        sourceType: "file",
-                        url: "https://s3.amazonaws.com/igv.broadinstitute.org/annotations/hg19/genes/refGene.hg19.bed.gz",
-                        indexURL: "https://s3.amazonaws.com/igv.broadinstitute.org/annotations/hg19/genes/refGene.hg19.bed.gz.tbi",
-                        order: -1,
-                        visibilityWindow: 300000000
-                    }, {
-                        url: 'https://data.broadinstitute.org/igvdata/BodyMap/hg19/IlluminaHiSeq2000_BodySites/brain_merged/accepted_hits.bam',
-                        name: 'Brain (BodyMap)'
-                    }
+        var igv = require("igv");
 
-                ]
-            };
+        var div = document.querySelector("#igvDiv"),
+                options = {
+                    genome: "hg19",
+                    locus: "myc",
+                    flanking: 1000,
+
+                    tracks: [
+                        {
+                            url: 'http://data.broadinstitute.org/igvdata/1KG/b37/data/HG02450/alignment/HG02450.mapped.ILLUMINA.bwa.ACB.low_coverage.20120522.bam',
+                            name: 'HG02450',
+                        },
+                        {
+                            name: "Genes",
+                            autoHeight: true,
+                            searchable: false,
+                            type: "annotation",
+                            format: "gtf",
+                            sourceType: "file",
+                            url: "https://s3.amazonaws.com/igv.broadinstitute.org/annotations/hg19/genes/gencode.v18.annotation.sorted.gtf.gz",
+                            indexURL: "https://s3.amazonaws.com/igv.broadinstitute.org/annotations/hg19/genes/gencode.v18.annotation.sorted.gtf.gz.tbi",
+                            visibilityWindow: 10000000,
+                            order: Number.MAX_VALUE,
+                            displayMode: "EXPANDED",
+                            searchable: true
+                        }
+                    ]
+                };
 
         igv.createBrowser(div, options);
 
